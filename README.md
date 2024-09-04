@@ -1,7 +1,7 @@
 # EXPENSE-TRACKER
 # Microservices Architecture for Scalable and Secure Applications
 
-![Architecture Overview](./path/to/your/exp.png)
+![Architecture Overview](<img width="1000" alt="exp" src="https://github.com/user-attachments/assets/2068b653-748b-40d9-8244-91ae61444421">)
 
 ## 🚀 Project Overview
 
