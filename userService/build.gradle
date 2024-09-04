@@ -1,0 +1,49 @@
+plugins {
+	id 'application'
+	id 'java'
+	id 'org.springframework.boot' version '3.3.2'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.sagnik'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+ext {
+	lombokVersion = "1.18.30"
+}
+application {
+	mainClass = 'com.sagnik.userService.UserServiceApplication'
+}
+dependencies {
+	dependencies {
+		implementation 'org.springframework.boot:spring-boot-starter'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+		implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.33'
+		implementation 'org.springframework.boot:spring-boot-starter-parent:2.6.2'
+		implementation 'org.springframework.kafka:spring-kafka'
+		implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+		implementation group: 'org.projectlombok', name:'lombok', version: "$lombokVersion"
+		compileOnly group: 'org.projectlombok', name:'lombok', version: "$lombokVersion"
+		annotationProcessor group: 'org.projectlombok', name: 'lombok', version: "$lombokVersion"
+		testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: "$lombokVersion"
+		testImplementation group: 'org.projectlombok', name: 'lombok', version: "$lombokVersion"
+
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
