@@ -1,7 +1,7 @@
 # EXPENSE-TRACKER
 # Microservices Architecture for Scalable and Secure Applications
 
-![Architecture Overview](<img width="1000" alt="exp" src="https://github.com/user-attachments/assets/2068b653-748b-40d9-8244-91ae61444421">)
+![Architecture Overview](![Architecture Overview](https://github.com/user-attachments/assets/2068b653-748b-40d9-8244-91ae61444421)
 
 ## 🚀 Project Overview
 
@@ -21,8 +21,8 @@ Welcome to the **Microservices Architecture for Secure and Scalable Applications
 - **Spring Boot**: For building microservices.
 - **Kong API Gateway**: For managing API requests.
 - **Kafka & RabbitMQ**: For event-driven architecture.
-- **Redis**: For caching and session management.
-- **Docker & Kubernetes**: For containerization and orchestration.
+- **Redis**: For caching and session management. ( UNDER PROGRESS )
+- **Docker & Kubernetes**: For containerization and orchestration. ( UNDER PROGRESS )
 - **MySQL**: For relational database management.
 
 ## 📜 Architecture Overview
@@ -86,7 +86,6 @@ This architecture is designed with a focus on separation of concerns and scalabi
 
 All configurations are managed via environment variables. Refer to the `.env.example` file for the required settings and customize them as needed for your environment.
 
-## 🧪 Testing
 
 Unit and integration tests are provided for each microservice. To run the tests, navigate to the service directory and execute:
 ```bash
