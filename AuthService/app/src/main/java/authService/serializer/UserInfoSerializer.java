@@ -1,5 +1,6 @@
 package authService.serializer;
 
+import authService.eventProducer.UserInfoEvent;
 import authService.model.UserInfoDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -7,7 +8,7 @@ import org.apache.kafka.common.serialization.Serializer;
 
 import java.util.Map;
 
-public class UserInfoSerializer implements Serializer<UserInfoDTO>
+public class UserInfoSerializer implements Serializer<UserInfoEvent>
 {
 
     @Override
@@ -15,7 +16,7 @@ public class UserInfoSerializer implements Serializer<UserInfoDTO>
     }
 
     @Override
-    public byte[] serialize(String arg0, UserInfoDTO arg1) {
+    public byte[] serialize(String arg0, UserInfoEvent arg1) {
         byte[] retVal=null;
         ObjectMapper objectMapper=new ObjectMapper();
         try{
