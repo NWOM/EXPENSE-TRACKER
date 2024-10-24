@@ -1,0 +1,56 @@
+name: CI for AuthService and userService
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  auth-service:
+    name: Build and Test AuthService
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./AuthService
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+
+      - name: Install Dependencies
+        run: ./gradlew build
+
+      - name: Run Tests
+        run: ./gradlew test
+
+  user-service:
+    name: Build and Test userService
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./userService
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+
+      - name: Install Dependencies
+        run: ./gradlew build
+
+      - name: Run Tests
+        run: ./gradlew test
+
+
