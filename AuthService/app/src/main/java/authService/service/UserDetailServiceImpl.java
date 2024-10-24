@@ -78,6 +78,7 @@ public class UserDetailServiceImpl implements UserDetailsService
                 .firstName(userInfoDTO.getFirstName())
                 .lastName(userInfoDTO.getLastName())
                 .email(userInfoDTO.getEmail())
+                .phoneNumber(userInfoDTO.getPhoneNumber())
                 .build();
     }
 }
